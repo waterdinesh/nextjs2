@@ -1,0 +1,91 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  background: rgb(212, 193, 170);
+}
+img {
+  height: 80px;
+}
+.card {
+  background: rgb(109, 194, 166);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.btn {
+  border: none;
+  outline: none;
+  background: #4a5fbc;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #4a5fbc;
+}
+
+.heading {
+  padding: 25px 0;
+}
+.cartCount {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.cartCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #38d6ce;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 5px;
+}
+/* Your existing CSS code here */
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .productsWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query for screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  .productsWrapper {
+    grid-template-columns: 1fr;
+  }
+  .cartCard {
+    flex-direction: column;
+  }
+  .cartCount {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .navLink {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
